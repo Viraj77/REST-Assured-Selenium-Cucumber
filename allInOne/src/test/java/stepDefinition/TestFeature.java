@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import PF.Guru99DemoLogin;
+import PF.HomePageGuru99;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -66,14 +67,16 @@ public class TestFeature extends BrowserFactory {
         System.out.println("-------------------------- URL IS : "+url);
         openBrowser("Edge");
         Guru99DemoLogin gdl = new Guru99DemoLogin(driver);
+        HomePageGuru99 hp = new HomePageGuru99(driver);
         driver.get(url);
         driver.findElement(By.id("email"));
         WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wt.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("email"))));
         gdl.signIn("mngr136913","Omn@12");
-        //closeBrowser();
-        //quitBrowser();
+
+        hp.verifyHomePageAfterLogin();
+
 
     }
 
