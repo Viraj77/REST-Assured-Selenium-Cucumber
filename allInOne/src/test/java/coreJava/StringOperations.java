@@ -10,21 +10,21 @@ import java.util.List;
 public class StringOperations {
 
     public String s = "Viraj Maheta Automation Lead";
-    public String x = "VirajMahetaQAAutomationLead";
+    public String x = "manojpandey";
 
     public void identify_smallest_word(String s) {
         List<String> words = Arrays.asList(s.split(" "));
 
         String shortestWord = words.stream().min(
                         Comparator.comparing(word -> word.length())).get();
-        System.out.println(shortestWord);
+        System.out.println("Shortest Word : " +shortestWord);
     }
 
     public void identify_biggest_word(String s) {
         List<String> words = Arrays.asList(s.split(" "));
 
         String shortestWord = words.stream().max(Comparator.comparing(word -> word.length())).get();
-        System.out.println(shortestWord);
+        System.out.println("Longest word : "+shortestWord);
     }
 
     public void reverse_String(String s){

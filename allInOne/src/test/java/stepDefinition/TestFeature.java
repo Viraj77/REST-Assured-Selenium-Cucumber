@@ -11,7 +11,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utills.BrowserFactory;
-
 import java.time.Duration;
 
 public class TestFeature extends BrowserFactory {
@@ -63,16 +62,18 @@ public class TestFeature extends BrowserFactory {
     }
 
     @Given("user open demo guru99 login page with {string}")
-    public void openBrowser(String url){
+    public void openUrlInBrowser(String url){
         System.out.println("-------------------------- URL IS : "+url);
-        openBrowser();
+        openBrowser("Edge");
         Guru99DemoLogin gdl = new Guru99DemoLogin(driver);
         driver.get(url);
         driver.findElement(By.id("email"));
         WebDriverWait wt = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wt.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("email"))));
-        gdl.signIn("","");
+        gdl.signIn("mngr136913","Omn@12");
+        //closeBrowser();
+        //quitBrowser();
 
     }
 
