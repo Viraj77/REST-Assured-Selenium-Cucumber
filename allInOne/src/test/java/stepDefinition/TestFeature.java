@@ -74,10 +74,10 @@ public class TestFeature extends BrowserFactory {
 
         wt.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("email"))));
         gdl.signIn("mngr136913","Omn@12");
-
         hp.verifyHomePageAfterLogin();
-
-
+        hp.clickOnSeleniumMenu();
+        hp.clickOnRadioAndCheckboxMenu();
+        hp.selectRadioButton("Option1");
     }
 
 

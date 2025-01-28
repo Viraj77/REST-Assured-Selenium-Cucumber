@@ -24,7 +24,6 @@ public class BrowserFactory {
                     break;
 
                 case "Edge":
-
                     EdgeOptions ept = new EdgeOptions();
                     ept.addArguments("disable-extensions");
                     ept.addArguments("--start-maximized");
