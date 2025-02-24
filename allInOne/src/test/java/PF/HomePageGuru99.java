@@ -1,6 +1,6 @@
 package PF;
 
-import jdk.internal.org.jline.terminal.TerminalBuilder;
+//import jdk.internal.org.jline.terminal.TerminalBuilder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -102,7 +102,7 @@ public class HomePageGuru99 {
 
         String rb1Value = rb1.getText();
         System.out.println(rb1Value);
-        
+
     //Write for loop to get the rb value and then select the rb which is matching with the given data in value string
 
     }

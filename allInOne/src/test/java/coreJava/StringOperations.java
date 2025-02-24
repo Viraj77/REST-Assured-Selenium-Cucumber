@@ -64,11 +64,26 @@ public class StringOperations {
 
     }
 
+    public void findSpecificStringValue(String s){
+
+        String[] sArray = s.split("\\s");
+
+        for(String a : sArray){
+            if (a.equals("Viraj")){
+                System.out.println("String Viraj Found in Input");
+            }else{
+                System.out.println("Viraj not found in string");
+            }
+        }
+
+    }
+
     @Test
     public void test_scenarios(){
         identify_smallest_word(s);
         identify_biggest_word(s);
         find_duplicate_char(x);
         reverse_String(s);
+        findSpecificStringValue(s);
     }
 }
