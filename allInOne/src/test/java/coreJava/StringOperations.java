@@ -11,6 +11,7 @@ public class StringOperations {
 
     public String s = "Viraj Maheta Automation Lead";
     public String x = "manojpandey";
+    public String a = "Viraj Maheta \n +91-9638454477 \n 7 Anant Society part -1 \n Gomtipur \n Ahmedabad";
 
     public void identify_smallest_word(String s) {
         List<String> words = Arrays.asList(s.split(" "));
@@ -64,15 +65,25 @@ public class StringOperations {
 
     }
 
-    public void findSpecificStringValue(String s){
+    public void findSpecificStringValue(String s, String a){
 
         String[] sArray = s.split("\\s");
 
-        for(String a : sArray){
-            if (a.equals("Viraj")){
+        for(String b : sArray){
+            if (b.equals("Viraj")){
                 System.out.println("String Viraj Found in Input");
             }else{
                 System.out.println("Viraj not found in string");
+            }
+        }
+
+        //Second loop to use contains method on the given String
+        String[] aArray = a.split("\\n");
+        for(String s3 : aArray){
+            if(s3.contains("4544")){
+                System.out.println("Found");
+            }else{
+                System.out.println("Not found");
             }
         }
 
@@ -84,6 +95,6 @@ public class StringOperations {
         identify_biggest_word(s);
         find_duplicate_char(x);
         reverse_String(s);
-        findSpecificStringValue(s);
+        findSpecificStringValue(s,a);
     }
 }
